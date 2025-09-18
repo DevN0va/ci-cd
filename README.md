@@ -65,7 +65,6 @@ docker-compose up --build
 
 
 Frontend → http://localhost:80
-
 Backend → http://localhost:5000
 
 ### 🌐 Deployment (AWS EC2)
