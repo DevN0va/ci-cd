@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./todo-backend
+    container_name: backend
+    restart: always
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URL=mongodb+srv://devops:devops@todoappdb.3n8catn.mongodb.net/todoapp?retryWrites=true&w=majority&appName=TodoAppDB
+
+  frontend:
+    build: ./todo-frontend
+    container_name: frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
