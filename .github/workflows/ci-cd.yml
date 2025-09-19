@@ -44,3 +44,4 @@ jobs:
             cd ~/todoapp
             docker-compose pull
             docker-compose up -d
+          
